@@ -10,8 +10,20 @@ h1 {
 	padding: 0px;
 }
 
+h4 {
+	font-size: 18px;
+	margin-bottom: -15px;
+	border: 0px;
+	padding: 0px;
+	color: #0B0B3B;
+}
+
+li {
+	list-style-type: none;
+}
+
 a {
-	color: black;
+	color: #0B0B3B;
 	text-decoration: none;
 }
 

@@ -1,21 +1,9 @@
-<table>
-  <thead>
-    <tr>
-      <th>Video Title</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-
-  <tbody>
+<h3>Some awesome places in Austin</h3>
+<ul> 
   <% @places.each do |place| %>
-    <tr>
-      <td><%= place.name %></td>
-      <td><%= link_to 'Show', place %></td>
-      <td><%= link_to 'Edit', edit_place_path(place) %></td>
-      <td><%= link_to 'Destroy', place, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-    </tr>
+    <li><%= link_to place.name, place_path(place.name) %><br>
+      <img src="<%= place.picture_url %>"><br>
+      <%= place.review %><br>
+    </li>
   <% end %>
-  </tbody>
-</table>
+</ul>

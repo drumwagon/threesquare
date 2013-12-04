@@ -4,6 +4,8 @@
     <li><%= link_to place.name, place_path(place.id) %><br>
       <%= link_to image_tag(place.picture_url, :height => "100px"), place_path(place.id) %> 
       <%= place.snippet %><br>
-    </li>
+      <%= link_to 'Edit', edit_place_path(place) %> - 
+      <%= link_to 'Delete', place, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    </li><br>
   <% end %>
 </ul>

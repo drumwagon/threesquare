@@ -12,8 +12,12 @@ class PlacesController < ApplicationController
   	@place = Place.new
   end
 
+  def edit
+    @place = Place.find(params[:id])
+  end
+
   def create
-  	@place = Place.new(video_params)
+  	@place = Place.new(place_params)
   	@place.save
   	redirect_to root_path
   end

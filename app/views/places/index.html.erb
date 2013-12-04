@@ -2,8 +2,8 @@
 <ul> 
   <% @places.each do |place| %>
     <li><%= link_to place.name, place_path(place.id) %><br>
-      <img src="<%= place.picture_url %>" height="100px">
-      <%= place.review %><br>
+      <%= link_to image_tag(place.picture_url, :height => "100px"), place_path(place.id) %> 
+      <%= place.snippet %><br>
     </li>
   <% end %>
 </ul>

@@ -6,7 +6,7 @@ class VideosController < ApplicationController
   end
 
   def index
-    @places = Place.all
+    # @places = Place.all
   end
 
   def new
